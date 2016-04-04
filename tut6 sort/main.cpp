@@ -3,7 +3,7 @@
 template <class name>
 void sort(name a[],name b)
 {
-	name i, j;
+	int i, j;
 	bool flag = 1;    // set flag to 1 to start first pass
 	name temp;             // holding variable
 
@@ -25,11 +25,19 @@ void sort(name a[],name b)
 }
 using namespace std;
 int main(){
-	int array[10] = { 25, 65, 32, 45, 12, 2, 36, 26, 3, 20 };
+
 	const int x = 10;
-	sort(array, x);
+	int array[x] = { 25, 65, 32, 45, 12, 2, 36, 26, 3, 20 };
+		sort(array, x);
 	for (int i = 0; i < 10; i++){
-		cout << array[i] << endl;
+		cout << "integer point values"<<array[i] << endl;
 	}
+	const int y = 10;
+	float arrays[y] = { 25.23, 65.22, 32.0, 45.55, 12.2, 2.00, 36.25, 26.2, 3.0, 20.56 };
+		sort(arrays,float(y));
+		for (int i = 0; i < 10; i++){
+			cout <<"floating point numbers"<< arrays[i] << endl;
+		}
+
 
 }
