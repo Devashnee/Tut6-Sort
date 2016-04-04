@@ -1,7 +1,9 @@
 #include<iostream>
+#include<string.h>
+#include<sstream>
 
-template <class name>
-void sort(name a[],name b)
+template <class name,class name1>
+void sort(name a[],name1 b)
 {
 	int i, j;
 	bool flag = 1;    // set flag to 1 to start first pass
@@ -35,10 +37,17 @@ int main(){
 	}
 	const int y = 10;
 	float arrays[y] = { 25.23, 65.22, 32.0, 45.55, 12.2, 2.00, 36.25, 26.2, 3.0, 20.56 };
-	sort(arrays, float(y));
+	sort(arrays, y);
 	cout << "floating point numbers"  << endl;
 	for (int i = 0; i < 10; i++){
 		cout << arrays[i] << endl;
+	}
+	const int z = 5;
+	string array1[z] = { "nivaan", "devashnee", "panga", "monkey", "tintin" };
+	sort(array1, z);
+	cout << "displaying sorted string" << endl;
+	for (int i = 0; i < z; i++){
+		cout << array1[i] << endl;
 	}
 
 }
